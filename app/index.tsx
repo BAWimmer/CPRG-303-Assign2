@@ -1,15 +1,14 @@
-import { Text, View } from "react-native";
+import Home from "@/components/Home";
+import Profile from "@/components/Profile";
+import Subscriptions from "@/components/Subscriptions";
+import { View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={{flex: 1}}>
+      <Home />
+      <Subscriptions />
+      <Profile />
     </View>
   );
 }
