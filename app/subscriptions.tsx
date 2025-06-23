@@ -1,14 +1,16 @@
 import React from "react";
 import {
-    Image,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
+
+import Feather from "@expo/vector-icons/Feather";
 
 export default function SubscriptionsScreen() {
   // Subscribed channels mock data
@@ -134,13 +136,19 @@ export default function SubscriptionsScreen() {
 
           <View style={styles.headerIcons}>
             <TouchableOpacity style={styles.headerIconButton}>
-              <Text style={styles.headerIcon}>📺</Text>
+              <Text style={styles.headerIcon}>
+                <Feather name="cast" size={24} color="white" />
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.headerIconButton}>
-              <Text style={styles.headerIcon}>🔔</Text>
+              <Text style={styles.headerIcon}>
+                <Feather name="bell" size={24} color="white" />
+              </Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.headerIconButton}>
-              <Text style={styles.headerIcon}>🔍</Text>
+              <Text style={styles.headerIcon}>
+                <Feather name="search" size={24} color="white" />
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -234,9 +242,6 @@ export default function SubscriptionsScreen() {
                   {video.views} • {video.timeAgo}
                 </Text>
               </View>
-              <TouchableOpacity style={styles.cardMoreButton}>
-                <Text style={styles.moreButtonText}>⋮</Text>
-              </TouchableOpacity>
             </TouchableOpacity>
           ))}
         </ScrollView>
